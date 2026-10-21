@@ -105,7 +105,7 @@ export default function SignupPage() {
               setCompanyIdError('');
               nextStep();
             }} className="space-y-6">
-              <div>
+              <div className="text-center">
                 <h2 className="text-2xl font-bold text-gray-900 mb-1">Enter your Company ID</h2>
                 <p className="text-gray-500 text-sm">Step 1 of 2 — Your HR team or manager provided this ID</p>
               </div>
@@ -164,7 +164,7 @@ export default function SignupPage() {
           {/* Step 2: Personal Details */}
           {step === 2 && (
             <form onSubmit={handleSubmit} className="space-y-5">
-              <div>
+              <div className="text-center">
                 <h2 className="text-2xl font-bold text-gray-900 mb-1">Your details</h2>
                 <p className="text-gray-500 text-sm">Step 2 of 2 — Tell us about yourself</p>
               </div>
