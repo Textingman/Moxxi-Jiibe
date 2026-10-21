@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   title: 'Jiibe — Employee Lifestyle Benefits Platform',
   description: 'Give your team the perks they actually want. Netflix, Hulu, Uber, DoorDash, UrbanSitter, Rover, and 500+ more lifestyle benefits — all in one platform HR teams love.',
   keywords: 'employee benefits, lifestyle benefits, perks platform, HR benefits, Netflix, Hulu, Uber, DoorDash, employee perks',
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
