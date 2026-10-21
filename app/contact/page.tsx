@@ -50,20 +50,6 @@ export default function ContactPage() {
               <div className="space-y-6">
                 {[
                   {
-                    icon: '📧',
-                    title: 'General Inquiries',
-                    desc: 'Questions about Jiibe, partnerships, or press.',
-                    contact: 'hello@jiibe.com',
-                    href: 'mailto:hello@jiibe.com',
-                  },
-                  {
-                    icon: '🎯',
-                    title: 'Sales & Demos',
-                    desc: 'Ready to see Jiibe in action? Talk to our team.',
-                    contact: 'sales@jiibe.com',
-                    href: 'mailto:sales@jiibe.com',
-                  },
-                  {
                     icon: '🛟',
                     title: 'Customer Support',
                     desc: 'Need help with your account or benefits? We\'re here.',
@@ -71,11 +57,18 @@ export default function ContactPage() {
                     href: 'mailto:support@jiibe.com',
                   },
                   {
+                    icon: '📞',
+                    title: 'Support Phone',
+                    desc: 'Speak directly with our support team.',
+                    contact: '(302) 555-0184',
+                    href: 'tel:+13025550184',
+                  },
+                  {
                     icon: '📍',
                     title: 'Office',
-                    desc: 'Jiibe, Inc.',
-                    contact: '8 The Green, Ste A, Dover, DE 19901',
-                    href: '#',
+                    desc: '8 The Green, Ste A, Dover, DE 19901',
+                    contact: 'View on Maps',
+                    href: 'https://maps.google.com/?q=8+The+Green+Ste+A+Dover+DE+19901',
                   },
                 ].map(item => (
                   <div key={item.title} className="flex items-start gap-4">
