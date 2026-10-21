@@ -21,7 +21,9 @@ export const metadata: Metadata = {
   description: 'Give your team the perks they actually want. Netflix, Hulu, Uber, DoorDash, UrbanSitter, Rover, and 500+ more lifestyle benefits — all in one platform HR teams love.',
   keywords: 'employee benefits, lifestyle benefits, perks platform, HR benefits, Netflix, Hulu, Uber, DoorDash, employee perks',
   icons: {
-    icon: '/favicon.png',
+    icon: [
+      { url: '/favicon.png', type: 'image/png' },
+    ],
     shortcut: '/favicon.png',
     apple: '/favicon.png',
   },
@@ -34,6 +36,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+      </head>
       <body>{children}</body>
     </html>
   );
