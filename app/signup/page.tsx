@@ -19,6 +19,7 @@ export default function SignupPage() {
     jobTitle: '',
     department: '',
     smsOptIn: false,
+    smsMarketingOptIn: false,
     termsAccepted: false,
   });
 
@@ -224,7 +225,7 @@ export default function SignupPage() {
                 </select>
               </div>
 
-              {/* SMS Opt-in — CARRIER COMPLIANT */}
+              {/* SMS Opt-in — CARRIER COMPLIANT (Transactional) */}
               <div className="p-4 rounded-xl border border-gray-200 bg-gray-50">
                 <div className="flex items-start gap-3">
                   <input
@@ -238,6 +239,24 @@ export default function SignupPage() {
                   />
                   <label htmlFor="smsOptIn" className="text-xs leading-relaxed text-gray-600 cursor-pointer">
                     By checking this box, I expressly consent to receive <strong>transactional account alert text messages</strong> from <strong>Jiibe</strong>, including benefit redemption confirmations, monthly balance reminders, new benefit availability alerts, and account notifications. Message frequency varies based on account activity. Message and data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for help or email <strong>support@jiibe.com</strong>. <strong>No mobile information will be shared with or sold to third parties for marketing or promotional purposes.</strong> Consent is not required as a condition of accessing the Jiibe platform or any benefits. See our <Link href="/terms" className="font-semibold underline" style={{ color: '#1a4731' }}>Terms of Service</Link> (Section 5) for full SMS disclosures.
+                  </label>
+                </div>
+              </div>
+
+              {/* SMS Opt-in — Promotional Marketing */}
+              <div className="p-4 rounded-xl border border-gray-200 bg-gray-50">
+                <div className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    id="smsMarketingOptIn"
+                    name="smsMarketingOptIn"
+                    checked={formData.smsMarketingOptIn}
+                    onChange={handleChange}
+                    className="mt-1 h-4 w-4 border-gray-300 rounded flex-shrink-0 cursor-pointer"
+                    style={{ accentColor: '#1a4731' }}
+                  />
+                  <label htmlFor="smsMarketingOptIn" className="text-xs leading-relaxed text-gray-600 cursor-pointer">
+                    By checking this box, I expressly consent to receive <strong>promotional and marketing text messages</strong> from <strong>Jiibe</strong>, including new benefit announcements, seasonal promotions, exclusive offers, and platform updates. Message frequency may vary. Message and data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for help or email <strong>support@jiibe.com</strong>. <strong>No mobile information will be shared with or sold to third parties for marketing or promotional purposes.</strong> Consent is not required as a condition of accessing the Jiibe platform or any benefits. See our <Link href="/terms" className="font-semibold underline" style={{ color: '#1a4731' }}>Terms of Service</Link> and <Link href="/sms-policy" className="font-semibold underline" style={{ color: '#1a4731' }}>SMS Policy</Link> for full disclosures.
                   </label>
                 </div>
               </div>
