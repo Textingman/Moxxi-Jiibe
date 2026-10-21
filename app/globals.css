@@ -1,26 +1,300 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Core brand */
+  --brand:        #1a4731;
+  --brand-mid:    #2d6a4f;
+  --brand-light:  #40916c;
+
+  /* Backgrounds */
+  --ivory:        #faf8f4;
+  --ivory-dark:   #f2ede4;
+  --cream:        #fdf9f3;
+  --white:        #ffffff;
+
+  /* Category accent palette */
+  --apricot:      #f5a97f;
+  --apricot-bg:   #fef3ec;
+  --apricot-text: #8b3a0f;
+
+  --sage:         #7aab8a;
+  --sage-bg:      #eef6f1;
+  --sage-text:    #1e5c35;
+
+  --lavender:     #a89fd4;
+  --lavender-bg:  #f2f0fb;
+  --lavender-text:#3d2f7a;
+
+  --sky:          #7ab8d4;
+  --sky-bg:       #edf6fb;
+  --sky-text:     #1a4a6b;
+
+  --rose:         #d47a8a;
+  --rose-bg:      #fbeef1;
+  --rose-text:    #7a1f30;
+
+  --amber:        #d4a84b;
+  --amber-bg:     #fdf5e4;
+  --amber-text:   #6b4a0f;
+
+  --teal:         #4ab8b0;
+  --teal-bg:      #e8f8f7;
+  --teal-text:    #1a5c58;
+
+  --plum:         #9b6db5;
+  --plum-bg:      #f5eefb;
+  --plum-text:    #4a1f6b;
+
+  /* Text */
+  --foreground:   #1a1a1a;
+  --muted:        #6b7280;
+  --subtle:       #9ca3af;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+* { box-sizing: border-box; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
+  background: var(--ivory);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Headline font ── */
+.font-display {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ── Navigation ── */
+.glass-nav {
+  background: rgba(250, 248, 244, 0.94);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* ── Cards ── */
+.glass-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Benefit cards ── */
+.benefit-card {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.benefit-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.09);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ── Category accent pills ── */
+.cat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.cat-entertainment { background: var(--apricot-bg); color: var(--apricot-text); }
+.cat-food          { background: var(--amber-bg);   color: var(--amber-text);   }
+.cat-travel        { background: var(--sky-bg);     color: var(--sky-text);     }
+.cat-family        { background: var(--rose-bg);    color: var(--rose-text);    }
+.cat-wellness      { background: var(--sage-bg);    color: var(--sage-text);    }
+.cat-learning      { background: var(--lavender-bg);color: var(--lavender-text);}
+.cat-shopping      { background: var(--amber-bg);   color: var(--amber-text);   }
+.cat-pets          { background: var(--teal-bg);    color: var(--teal-text);    }
+.cat-financial     { background: var(--sage-bg);    color: var(--sage-text);    }
+.cat-home          { background: var(--sky-bg);     color: var(--sky-text);     }
+.cat-commuter      { background: var(--plum-bg);    color: var(--plum-text);    }
+.cat-beauty        { background: var(--rose-bg);    color: var(--rose-text);    }
+.cat-sports        { background: var(--teal-bg);    color: var(--teal-text);    }
+.cat-tech          { background: var(--lavender-bg);color: var(--lavender-text);}
+.cat-giving        { background: var(--apricot-bg); color: var(--apricot-text); }
+
+/* ── Category section accent borders ── */
+.cat-border-entertainment { border-left: 3px solid var(--apricot); }
+.cat-border-food          { border-left: 3px solid var(--amber);   }
+.cat-border-travel        { border-left: 3px solid var(--sky);     }
+.cat-border-family        { border-left: 3px solid var(--rose);    }
+.cat-border-wellness      { border-left: 3px solid var(--sage);    }
+.cat-border-learning      { border-left: 3px solid var(--lavender);}
+.cat-border-shopping      { border-left: 3px solid var(--amber);   }
+.cat-border-pets          { border-left: 3px solid var(--teal);    }
+
+/* ── Gradient text ── */
+.gradient-text-brand {
+  background: linear-gradient(135deg, #1a4731, #40916c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-warm {
+  background: linear-gradient(135deg, #c2410c, #ea580c, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: var(--brand);
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: var(--brand-mid);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(26, 71, 49, 0.3);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  background: transparent;
+  color: var(--brand);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(26, 71, 49, 0.25);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: rgba(26, 71, 49, 0.05);
+  border-color: var(--brand);
+}
+
+/* ── Sections ── */
+.section-ivory  { background: var(--ivory); }
+.section-cream  { background: var(--cream); }
+.section-white  { background: var(--white); }
+.section-dark   { background: #1a2e1f; color: white; }
+
+/* ── Marketplace hero card — static, no hover ── */
+.marketplace-card {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  padding: 16px;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ── Floating animation ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+
+.float-animation          { animation: float 4s ease-in-out infinite; }
+.float-animation-delay-1  { animation: float 4s ease-in-out 0.7s infinite; }
+.float-animation-delay-2  { animation: float 4s ease-in-out 1.4s infinite; }
+
+/* ── Fade in ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up { animation: fadeInUp 0.5s ease-out forwards; }
+
+/* ── Blob ── */
+.blob {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  filter: blur(50px);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.12); border-radius: 3px; }
+
+/* ── Accordion ── */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-content.open { max-height: 500px; }
+
+/* ── Category filter pills (interactive) ── */
+.filter-pill {
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  color: #4b5563;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.filter-pill:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.filter-pill.active {
+  background: var(--brand);
+  color: white;
+  border-color: var(--brand);
+}
+
+/* ── Redemption state badges ── */
+.badge-active    { background: var(--sage-bg);    color: var(--sage-text);    }
+.badge-available { background: var(--lavender-bg);color: var(--lavender-text);}
+.badge-redeemed  { background: #f3f4f6;           color: #6b7280;             }
+
+/* ── Warm divider ── */
+.divider-warm {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0,0,0,0.08), transparent);
 }
