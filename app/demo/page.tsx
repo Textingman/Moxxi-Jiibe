@@ -103,7 +103,7 @@ export default function DemoPage() {
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1.5">First Name *</label>
                         <input type="text" name="firstName" value={formData.firstName} onChange={handleChange}
-                          className={`w-full px-4 py-3 border rounded-xl bg-white text-sm ${errors.firstName ? 'border-red-300' : 'border-gray-200'}`}
+                          className={`w-full px-4 py-3 border rounded-xl bg-white text-sm outline-none ${errors.firstName ? 'border-red-300' : 'border-gray-200'}`}
                           placeholder="Jane" />
                         {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
                       </div>
