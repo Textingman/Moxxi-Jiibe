@@ -60,15 +60,15 @@ export default function ContactPage() {
                     icon: '📞',
                     title: 'Support Phone',
                     desc: 'Speak directly with our support team.',
-                    contact: '(302) 555-0184',
-                    href: 'tel:+13025550184',
+                    contact: '(302) 302-4972',
+                    href: 'tel:+13023024972',
                   },
                   {
                     icon: '📍',
                     title: 'Office',
-                    desc: '8 The Green, Ste A, Dover, DE 19901',
+                    desc: '213 N Market Street #1150 Wilmington, DE 19801',
                     contact: 'View on Maps',
-                    href: 'https://maps.google.com/?q=8+The+Green+Ste+A+Dover+DE+19901',
+                    href: 'https://maps.google.com/?q=213+N+Market+Street+%231150+Wilmington+DE+19801',
                   },
                 ].map(item => (
                   <div key={item.title} className="flex items-start gap-4">

@@ -197,7 +197,7 @@ export default function TermsPage() {
               <p className="text-gray-600 mb-4">If you have questions about these Terms, please contact us:</p>
               <div className="space-y-2">
                 <p className="text-gray-600"><strong>Email:</strong> <a href="mailto:support@jiibe.com" className="font-semibold hover:underline" style={{ color: '#1a4731' }}>support@jiibe.com</a></p>
-                <p className="text-gray-600"><strong>Address:</strong> Jiibe, Inc., 8 The Green, Ste A, Dover, DE 19901</p>
+                <p className="text-gray-600"><strong>Address:</strong> Jiibe, Inc., 213 N Market Street #1150 Wilmington, DE 19801</p>
                 <p className="text-gray-600"><strong>Website:</strong> <a href="/" className="font-semibold hover:underline" style={{ color: '#1a4731' }}>jiibe.com</a></p>
               </div>
             </div>

@@ -107,7 +107,7 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-xs text-gray-500 text-center md:text-left">
             <p>© 2026 Jiibe, Inc. All rights reserved.</p>
-            <p className="mt-1">8 The Green, Ste A, Dover, DE 19901 · support@jiibe.com</p>
+            <p className="mt-1">213 N Market Street #1150 Wilmington, DE 19801 · support@jiibe.com</p>
           </div>
           <div className="text-xs text-gray-600 text-center md:text-right max-w-md">
             <p>No mobile information will be shared with or sold to third parties for marketing purposes. SMS opt-in is optional. Reply STOP to opt out, HELP for help. Msg & data rates may apply.</p>
